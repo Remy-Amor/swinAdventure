@@ -12,3 +12,4 @@ C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdven
 C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\swinAdventure.pdb
 C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\swinAdventure.genruntimeconfig.cache
 C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\ref\swinAdventure.dll
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\swinAdventure.sourcelink.json
