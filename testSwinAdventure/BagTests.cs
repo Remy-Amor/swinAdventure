@@ -1,5 +1,6 @@
 namespace TestSwinAdventure
 {
+
      using SwinAdventure;
 
      public class BagTests
@@ -8,5 +9,11 @@ namespace TestSwinAdventure
           private Bag _testFoodBag;
           private Item _testItem1;
           private Item _testItem2;
+
+          [SetUp]
+          public void Setup()
+          {
+
+          }
      }
 }
