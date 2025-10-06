@@ -1,0 +1,14 @@
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\swinAdventure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\swinAdventure.AssemblyInfoInputs.cache
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\swinAdventure.AssemblyInfo.cs
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\swinAdventure.csproj.CoreCompileInputs.cache
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\bin\Debug\net9.0\swinAdventure.exe
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\bin\Debug\net9.0\swinAdventure.deps.json
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\bin\Debug\net9.0\swinAdventure.runtimeconfig.json
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\bin\Debug\net9.0\swinAdventure.dll
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\bin\Debug\net9.0\swinAdventure.pdb
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\swinAdventure.dll
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\refint\swinAdventure.dll
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\swinAdventure.pdb
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\swinAdventure.genruntimeconfig.cache
+C:\Users\remyo\OneDrive\Documents\compSci_Y1\Semester 2\objectOriented\swinAdventure\swinAdventure\obj\Debug\net9.0\ref\swinAdventure.dll
