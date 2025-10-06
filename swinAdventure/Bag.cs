@@ -17,7 +17,7 @@ namespace SwinAdventure
                }
           }
 
-          public GameObject Locate(string id)
+          public GameObject? Locate(string id)
           {
                if (AreYou(id))
                {
