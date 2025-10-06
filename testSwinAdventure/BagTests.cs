@@ -29,31 +29,45 @@ namespace TestSwinAdventure
           [Test]
           public void BagLocatesItself()
           {
-
+               Assert.That(_testToolBag.Locate("Bag"), Is.EqualTo(_testToolBag));
           }
 
           [Test]
           public void BagLocatesNothing()
           {
-
+               Assert.That(_testFoodBag.Locate("Hammer"), Is.EqualTo(null));
           }
 
           [Test]
           public void BagFullDescription()
           {
-
+               _testFoodBag.Inventory.Put(_testItem2);
+               Assert.That(_testFoodBag.FullDescription, Is.EqualTo("In the Food bag you can see:\na apple (apple)"));
           }
 
           [Test]
           public void BaginBag()
           {
+               // can locate bag inside bag
+               _testFoodBag.Inventory.Put(_testToolBag);
+               Assert.That(_testFoodBag.Locate("Tool Bag"), Is.EqualTo(_testToolBag));
+               // can locate other items in bag
+               _testFoodBag.Inventory.Put(_testItem1);
+               Assert.That(_testFoodBag.Locate("Hammer"), Is.EqualTo(_testItem1));
+
+               // can not locate items inside nested bag
+               _testToolBag.Inventory.Put(_testItem2);
+               Assert.That(_testFoodBag.Locate("Apple"), Is.EqualTo(null));
 
           }
 
           [Test]
           public void BagPrivilegedItem()
           {
-
+               _testFoodBag.Inventory.Put(_testToolBag);
+               _testItem1.PrivilegeEscalation("4423");
+               _testToolBag.Inventory.Put(_testItem1);
+               Assert.That(_testFoodBag.Locate("105914423"), Is.EqualTo(null));
           }
 
 
