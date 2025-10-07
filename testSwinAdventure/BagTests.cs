@@ -70,6 +70,14 @@ namespace TestSwinAdventure
                Assert.That(_testFoodBag.Locate("105914423"), Is.EqualTo(null));
           }
 
+          [Test]
+          public void BagIsEmpty()
+          {
+               Assert.That(_testFoodBag.IsEmpty, Is.EqualTo(true));
+               _testFoodBag.Inventory.Put(_testItem1);
+               Assert.That(_testFoodBag.IsEmpty, Is.EqualTo(false));
+          }
+
 
      }
 }

@@ -37,5 +37,17 @@ namespace SwinAdventure
           {
                get { return "In the " + Name + " you can see:\n" + Inventory.ItemList; }
           }
+
+          public bool IsEmpty()
+          {
+               if (Inventory.ItemList == "")
+               {
+                    return true;
+               }
+               else
+               {
+                    return false;
+               }
+          }
      }
 }
