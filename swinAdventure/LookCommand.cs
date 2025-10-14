@@ -37,7 +37,21 @@ namespace SwinAdventure
                 }
                 else return "Error in look input";
 
-            }
+            } else if (text.Length == 2)
+               {
+                    if (text[0] == "look")
+                    {
+                         if (text[1] == "around")
+                         {
+                              if (p.Inventory.ItemList != null)
+                              {
+                                   return ("You have: " + p.Inventory.ItemList);
+                              }
+                              else return ("You have nothing.");
+                         }
+                         else return "What do you want to look at?";
+                    } else return "Error in look input";
+               }
             return "I do not know how to look like that";
         }
         private IHaveInventory? FetchContainer(Player p, string containerId)
