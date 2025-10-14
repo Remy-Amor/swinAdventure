@@ -53,22 +53,60 @@ class MainClass
             // }
 
 
-            // Week 9 Task
-            List<IHaveInventory> myContainers = new List<IHaveInventory>();
+            // // Week 9 Task
+            // List<IHaveInventory> myContainers = new List<IHaveInventory>();
 
-            Player _testPlayer = new Player("James", "an explorer");
-            myContainers.Add(_testPlayer);
+            // Player _testPlayer = new Player("James", "an explorer");
+            // myContainers.Add(_testPlayer);
 
-            Bag _testToolBag = new Bag(["bag", "tool"], "Tools Bag", "A bag that contains tools");
-            Item _testItem2 = new Item(["stew", "beef"], "A Beef Stew", "A hearty beef stew");
+            // Bag _testToolBag = new Bag(["bag", "tool"], "Tools Bag", "A bag that contains tools");
+            // Item _testItem2 = new Item(["stew", "beef"], "A Beef Stew", "A hearty beef stew");
 
-            _testToolBag.Inventory.Put(_testItem2);
-            myContainers.Add(_testToolBag);
+            // _testToolBag.Inventory.Put(_testItem2);
+            // myContainers.Add(_testToolBag);
 
-            for (int i = 0; i < myContainers.Count; i++) {
-                GameObject container = (GameObject)myContainers[i];
-                Console.WriteLine(container.FullDescription);
-            }
+            // for (int i = 0; i < myContainers.Count; i++) {
+            //     GameObject container = (GameObject)myContainers[i];
+            //     Console.WriteLine(container.FullDescription);
+            // }
+
+            Player _testPlayer;
+            Console.WriteLine("Player Name: ");
+            string playerName = Console.ReadLine();
+            Console.WriteLine("Player Description: ");
+            string playerDesc = Console.ReadLine();
+            _testPlayer = new Player(playerName, playerDesc);
+
+            Item item1 = new Item(new string[] { "silver", "hat" }, "A Silver Hat", "A very shiny silver hat");
+            Item item2 = new Item(new string[] { "light", "torch" }, "A Torch", "A Torch to light the path");
+            Item item3 = new Item(new string[] { "weapon", "sword" }, "A Sword", "A Sword to fight enemies");
+
+            Bag bag = new Bag(["Player Bag", "bag"], "bag", "A handy bag");
+            _testPlayer.Inventory.Put(bag);
+            bag.Inventory.Put(item3);
+
+             //add the items into the player's inventory
+
+            _testPlayer.Inventory.Put(item1);
+            _testPlayer.Inventory.Put(item2);
+
+            bool finished = false;
+            LookCommand cmd = new LookCommand();
+            while (!finished)
+               {
+                Console.WriteLine("What do you want to do?");
+                string command = Console.ReadLine();
+
+                if (command.ToLower() == "exit")
+                {
+                    finished = true;
+                    break;
+                }
+
+                string[] split = command.Split(" ");
+
+                Console.WriteLine(cmd.Execute(_testPlayer, split) + "\n");
+               }
         }
     }
 

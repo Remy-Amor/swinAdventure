@@ -14,7 +14,7 @@ namespace SwinAdventureTests
         [SetUp]
         public void Setup()
         {
-            _testLookCommand = new LookCommand(new string[] { "" });
+            _testLookCommand = new LookCommand();
             _testPlayer = new Player("HarryPotter", "a student");
 
             _testItem = new Item(new string[] { "gem", "Ruby" }, "A Ruby", "A bright Pink ruby");

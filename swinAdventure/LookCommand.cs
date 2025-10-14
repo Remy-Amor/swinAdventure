@@ -2,7 +2,7 @@ namespace SwinAdventure
 {
     public class LookCommand : Command
     {
-          public LookCommand(string[] ids) : base(ids)
+          public LookCommand() : base(["look"])
           {
           }
         
