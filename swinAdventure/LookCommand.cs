@@ -9,7 +9,7 @@ namespace SwinAdventure
         public override string Execute(Player p, string[] text)
           {
             // defaults to the container being the player
-            IHaveInventory container = p;
+            IHaveInventory? container = p;
 
             if (text.Length == 3 || text.Length == 5)
             {
