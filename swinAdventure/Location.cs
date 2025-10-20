@@ -40,7 +40,8 @@ namespace SwinAdventure
                          inventoryDescription = Inventory.ItemList;
                     }
                     else inventoryDescription = "there are no items at this location. ";
-                    return "You are in " + nameDescription + ". " + base.FullDescription + "\n Here, you can see: \n" + inventoryDescription;
+                    return "You are in " + nameDescription + ". " + base.FullDescription + "\n Here, you can see: \n" + inventoryDescription
+                              + "\n" + this.DescribePaths();
                }
           }
 
@@ -76,6 +77,24 @@ namespace SwinAdventure
                     }
                }
                return null;
+          }
+
+          public string DescribePaths()
+          {
+               List<string> pathDescription;
+               if (_paths != null)
+               {
+                    pathDescription = new List<string>(["You see paths to the "]);
+                    foreach (Path path in _paths)
+                    {
+                         pathDescription.Add(path.FirstId());
+                    }
+                    return string.Join(", ", pathDescription);
+               }
+               else
+               {
+                    return "There are no paths out of this location";
+               }
           }
      }
 }

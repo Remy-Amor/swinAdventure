@@ -19,21 +19,17 @@ namespace SwinAdventure
                          if (path != null)
                          {
                               player.Location = path.EndLocation;
-                              return ("You are now in: \n" + player.Location.FullDescription);
+                              return player.Location.FullDescription;
                          }
                          else
                          {
-                              return ("There are no paths that way!");
+                              return "There are no paths that way!";
                          }
                     }
                     else
                     {
-                         return ("Please Enter a Valid Direction");
+                         return "Please Enter a Valid Direction";
                     }
-               }
-               else if (text.Length == 1)
-               {
-                    return ("Move where?");
                }
                else
                {

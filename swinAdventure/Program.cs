@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
+using System.Formats.Tar;
+
 namespace SwinAdventure
 {
 class MainClass
@@ -99,6 +101,26 @@ class MainClass
             testLocation.Inventory.Put(locationItem2);
             _testPlayer.Location = testLocation;
 
+
+
+            // MoveCommand testing 
+            Location fieldLocation = new Location(["location", "field"], "A Field", "A beautiful field");
+            Location tavernLocation = new Location(["location", "tavern"], "The Tavern", "A lively tavern");
+            Location deadEndLocation = new Location(["location", "deadend"], "Dead end", "Uh oh, no paths out!");
+            Path pathNorthField = new Path(["north"], fieldLocation);
+            Path pathWestField = new Path(["west"], fieldLocation);
+            Path pathEastDungeon = new Path(["east"], testLocation);
+            Path pathSouthtavern = new Path(["south"], tavernLocation);
+            Path pathEastDeadEnd = new Path(["east"], deadEndLocation);
+            // assigning paths
+            testLocation.AddPath(pathWestField);
+            testLocation.AddPath(pathEastDeadEnd);
+            tavernLocation.AddPath(pathNorthField);
+            fieldLocation.AddPath(pathEastDungeon);
+            fieldLocation.AddPath(pathSouthtavern);
+
+
+            List<string> validMoveCommands = new List<string>(["move", "go", "head", "leave", "exit"]);
 
             bool finished = false;
             Command cmd;
