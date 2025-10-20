@@ -2,8 +2,8 @@
 using SwinAdventure;
 using System;
 
-namespace SwinAdventureTests
-{
+namespace TestSwinAdventure;
+
     public class LookCommandTests
     {
         private Item _testItem;
@@ -71,4 +71,4 @@ namespace SwinAdventureTests
         }
 
     }
-}
+

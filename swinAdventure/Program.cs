@@ -120,7 +120,6 @@ class MainClass
             fieldLocation.AddPath(pathSouthtavern);
 
 
-            List<string> validMoveCommands = new List<string>(["move", "go", "head", "leave", "exit"]);
 
             bool finished = false;
             Command cmd;
@@ -141,7 +140,7 @@ class MainClass
                     case "look":
                         cmd = new LookCommand();
                         break;
-                    case "move":
+                    case "move" or "go" or "head" or "leave" or "exit":
                         cmd = new MoveCommand();
                         break;
                     default:

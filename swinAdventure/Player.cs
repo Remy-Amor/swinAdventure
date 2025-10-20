@@ -21,10 +21,11 @@ namespace SwinAdventure
                {
                     return Inventory.Fetch(id);
                }
-               else
+               else if (Location != null)
                {
                     return Location.Locate(id);
                }
+               else return null;
           }
 
           public Inventory Inventory

@@ -56,16 +56,20 @@ namespace SwinAdventure
                 IHaveInventory? container = obj as IHaveInventory;
                 return container;
             }
-            else 
+            else if (p.Location != null)
             {
                 obj = p.Location.Locate(containerId);
                 if (obj == null)
                 {
                     return null;
                 }
-//              //effectively the same as the lines above
+                //              //effectively the same as the lines above
                 else return obj as IHaveInventory;
             }
+            else
+               {
+                return null;
+               }
         }
         private string? LookAtIn(string thingId, IHaveInventory container)
         {

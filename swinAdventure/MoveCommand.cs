@@ -28,7 +28,7 @@ namespace SwinAdventure
                     }
                     else
                     {
-                         return "Please Enter a Valid Direction";
+                         return "Please enter a valid direction";
                     }
                }
                else
