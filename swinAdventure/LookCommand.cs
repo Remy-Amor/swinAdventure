@@ -13,9 +13,7 @@ namespace SwinAdventure
 
             if (text.Length == 3 || text.Length == 5)
             {
-                if (text[0] == "look")
-                {
-                    if (text[1] == "at")
+                if (text[1] == "at")
                     {
                         if (text.Length == 5)
                         {
@@ -34,15 +32,11 @@ namespace SwinAdventure
                         return LookAtIn(text[2], container);
                     }
                     else return "What do you want to look at?";
-                }
-                else return "Error in look input";
 
             }
             else if (text.Length == 2)
             {
-                if (text[0] == "look")
-                {
-                    if (text[1] == "around")
+                if (text[1] == "around")
                     {
                         if (p.Inventory.ItemList != null)
                         {
@@ -51,17 +45,8 @@ namespace SwinAdventure
                         else return ("You have nothing.");
                     }
                     else return "What do you want to look at?";
-                }
-                else return "Error in look input";
             }
-               else if (text.Length == 1)
-               {
-                    if (text[0] == "look")
-                    {
-                    return p.Location.FullDescription;
-                    }
-               }
-            return "I do not know how to look like that";
+               else return p.Location.FullDescription;
         }
         private IHaveInventory? FetchContainer(Player p, string containerId)
         {

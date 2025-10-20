@@ -2,10 +2,12 @@ namespace SwinAdventure
 {
      public class Location : GameObject, IHaveInventory {
           private Inventory _inventory;
+          private List<Path> _paths;
 
           public Location(string[] ids, string name, string desc) : base(ids, name, desc)
           {
                _inventory = new Inventory();
+               _paths = new List<Path>();
           }
 
           public GameObject? Locate(string id)
@@ -50,5 +52,30 @@ namespace SwinAdventure
                }
           }
           
+          // for week 11 task 2
+          public List<Path> Paths
+          {
+               get
+               {
+                    return _paths;
+               }
+          }
+
+          public void AddPath(Path path)
+          {
+               _paths.Add(path);
+          }
+
+          public Path? LocatePath(string direction)
+          {
+               foreach (Path path in _paths)
+               {
+                    if (path.FirstId() == direction)
+                    {
+                         return path;
+                    }
+               }
+               return null;
+          }
      }
 }

@@ -101,7 +101,7 @@ class MainClass
 
 
             bool finished = false;
-            LookCommand cmd = new LookCommand();
+            Command cmd;
             while (!finished)
                {
                 Console.WriteLine("What do you want to do?");
@@ -114,6 +114,19 @@ class MainClass
                 }
 
                 string[] split = command.Split(" ");
+                switch(split[0])
+                    {
+                    case "look":
+                        cmd = new LookCommand();
+                        break;
+                    case "move":
+                        cmd = new MoveCommand();
+                        break;
+                    default:
+                        Console.WriteLine("Please enter a valid command");
+                        continue;
+                    }
+                    
 
                 Console.WriteLine(cmd.Execute(_testPlayer, split) + "\n");
                }
