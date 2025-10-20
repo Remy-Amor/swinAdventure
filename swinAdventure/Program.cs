@@ -80,6 +80,9 @@ class MainClass
             Item item1 = new Item(new string[] { "silver", "hat" }, "A Silver Hat", "A very shiny silver hat");
             Item item2 = new Item(new string[] { "light", "torch" }, "A Torch", "A Torch to light the path");
             Item item3 = new Item(new string[] { "weapon", "sword" }, "A Sword", "A Sword to fight enemies");
+            Item locationItem1 = new Item(["weapon", "bow"], "A bow", "A bow to shoot enemies with");
+            Item locationItem2 = new Item(["food", "porridge"], "Porridge", "A hearty meal");
+
 
             Bag bag = new Bag(["Player Bag", "bag"], "bag", "A handy bag");
             _testPlayer.Inventory.Put(bag);
@@ -89,6 +92,13 @@ class MainClass
 
             _testPlayer.Inventory.Put(item1);
             _testPlayer.Inventory.Put(item2);
+
+            // location testing variables
+            Location testLocation = new Location(["location", "dungeon"], "Dungeon", "A dark scary dungeon");
+            testLocation.Inventory.Put(locationItem1);
+            testLocation.Inventory.Put(locationItem2);
+            _testPlayer.Location = testLocation;
+
 
             bool finished = false;
             LookCommand cmd = new LookCommand();

@@ -24,7 +24,21 @@ namespace SwinAdventure
           {
                get
                {
-                    return "Placeholder";
+                    string nameDescription;
+                    string inventoryDescription;
+
+                    if (Name != null && Name != "")
+                    {
+                         nameDescription = Name;
+                    }
+                    else nameDescription = "an unknown location";
+
+                    if (Inventory != null && Inventory.ItemList != null)
+                    {
+                         inventoryDescription = Inventory.ItemList;
+                    }
+                    else inventoryDescription = "there are no items at this location. ";
+                    return "You are in " + nameDescription + ". " + base.FullDescription + "\n Here, you can see: \n" + inventoryDescription;
                }
           }
 

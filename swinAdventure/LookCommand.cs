@@ -31,40 +31,55 @@ namespace SwinAdventure
                             else return "What do you want to look in?";
                         }
                         //call the LookAtIn with (text[2], container);
-                         return LookAtIn(text[2], container);
+                        return LookAtIn(text[2], container);
                     }
                     else return "What do you want to look at?";
                 }
                 else return "Error in look input";
 
-            } else if (text.Length == 2)
+            }
+            else if (text.Length == 2)
+            {
+                if (text[0] == "look")
+                {
+                    if (text[1] == "around")
+                    {
+                        if (p.Inventory.ItemList != null)
+                        {
+                            return ("You have: " + p.Inventory.ItemList);
+                        }
+                        else return ("You have nothing.");
+                    }
+                    else return "What do you want to look at?";
+                }
+                else return "Error in look input";
+            }
+               else if (text.Length == 1)
                {
                     if (text[0] == "look")
                     {
-                         if (text[1] == "around")
-                         {
-                              if (p.Inventory.ItemList != null)
-                              {
-                                   return ("You have: " + p.Inventory.ItemList);
-                              }
-                              else return ("You have nothing.");
-                         }
-                         else return "What do you want to look at?";
-                    } else return "Error in look input";
+                    return p.Location.FullDescription;
+                    }
                }
             return "I do not know how to look like that";
         }
         private IHaveInventory? FetchContainer(Player p, string containerId)
         {
             GameObject? obj = p.Locate(containerId);
-            if (obj == null)
-            {
-                return null;
-            }
-            else
+            if (obj != null)
             {
                 IHaveInventory? container = obj as IHaveInventory;
                 return container;
+            }
+            else 
+            {
+                obj = p.Location.Locate(containerId);
+                if (obj == null)
+                {
+                    return null;
+                }
+//              //effectively the same as the lines above
+                else return obj as IHaveInventory;
             }
         }
         private string? LookAtIn(string thingId, IHaveInventory container)
