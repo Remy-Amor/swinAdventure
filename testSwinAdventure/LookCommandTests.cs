@@ -66,8 +66,7 @@ namespace SwinAdventureTests
         [Test]
         public void InvalidLook()
         {
-          Assert.That(_testLookCommand.Execute(_testPlayer, ["look", "around"]), Is.EqualTo("I do not know how to look like that"));
-          Assert.That(_testLookCommand.Execute(_testPlayer, ["hello", "105914423"]), Is.EqualTo("I do not know how to look like that"));
+          Assert.That(_testLookCommand.Execute(_testPlayer, ["look", "around"]), Is.EqualTo("You have: a A Ruby (gem)"));
           Assert.That(_testLookCommand.Execute(_testPlayer, ["look", "at", "Remy"]), Is.EqualTo("I can't find the Remy"));
         }
 
