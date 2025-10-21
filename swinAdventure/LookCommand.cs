@@ -49,7 +49,7 @@ namespace SwinAdventure
                     {
                     if (p.Location.LocatePath(text[1]) != null)
                     {
-                        return "To the " + text[1] + " you see: " + p.Location.Name;
+                        return "To the " + text[1] + " you see: " + p.Location.LocatePath(text[1]).EndLocation.Name;
                     }
                     else return "There is no path to the " + text[1];
                     }

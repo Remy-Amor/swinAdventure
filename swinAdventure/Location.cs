@@ -82,7 +82,7 @@ namespace SwinAdventure
           public string DescribePaths()
           {
                List<string> pathDescription;
-               if (Paths != null)
+               if (Paths.Count != 0)
                {
                     pathDescription = new List<string>();
                     foreach (Path path in _paths)
