@@ -89,7 +89,7 @@ namespace SwinAdventure
                     {
                          pathDescription.Add(path.FirstId());
                     }
-                    return "\nYou see paths to the " + string.Join(", ", pathDescription) + "\n";
+                    return "\nPaths to the " + string.Join(", ", pathDescription);
                }
                else
                {

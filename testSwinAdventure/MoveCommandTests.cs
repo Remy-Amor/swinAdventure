@@ -89,6 +89,6 @@ namespace TestSwinAdventure;
           [Test]
           public void ValidDirection()
           {
-               Assert.That(cmd.Execute(_testPlayer, ["move", "west"]), Is.EqualTo("You are in A Field. A beautiful field\nHere, you can see: \n\nYou see paths to the east, south\n"));
+               Assert.That(cmd.Execute(_testPlayer, ["move", "west"]), Is.EqualTo("You are in A Field. A beautiful field\nHere, you can see: \n\nPaths to the east, south\n"));
           }
       }

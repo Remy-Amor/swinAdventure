@@ -2,6 +2,8 @@ namespace SwinAdventure
 {
     public class LookCommand : Command
     {
+        private string[] validDirections = new string[] { "north", "east", "south", "west"};
+
           public LookCommand() : base(["look"])
           {
           }
@@ -43,6 +45,13 @@ namespace SwinAdventure
                             return ("You have: " + p.Inventory.ItemList);
                         }
                         else return ("You have nothing.");
+                    } else if (validDirections.Contains(text[1]))
+                    {
+                    if (p.Location.LocatePath(text[1]) != null)
+                    {
+                        return "To the " + text[1] + " you see: " + p.Location.Name;
+                    }
+                    else return "There is no path to the " + text[1];
                     }
                     else return "What do you want to look at?";
             }
